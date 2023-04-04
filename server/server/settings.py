@@ -139,7 +139,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'staticfiles'
 ]
 
 # Static files (CSS, JavaScript, Images)
