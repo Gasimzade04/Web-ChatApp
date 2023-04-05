@@ -140,7 +140,7 @@ USE_TZ = True
 
 STATICFILES_DIRS = [
     BASE_DIR / 'server',
-    BASE_DIR / 'client/build/static'
+    BASE_DIR / '../client/build/static'
 ]
 
 # Static files (CSS, JavaScript, Images)
