@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$w1e^)v1))o$sv6_3pzay)f!qzyd@!_m1-usi32ol-4u(kdz10
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["207.154.229.30"]
+ALLOWED_HOSTS = ["127.0.0.1", "207.154.229.30"]
 
 
 # Application definition
@@ -95,7 +95,7 @@ CHANNEL_LAYERS = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://207.154.229.30",
+    "http://localhost:3000",
 ]
 
 # Password validation
@@ -139,14 +139,15 @@ USE_L10N = True
 USE_TZ = True
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '/static'),
+    BASE_DIR / 'static',
+    BASE_DIR / 'client/build/static'
 ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 AUTH_USER_MODEL = 'user.User'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
